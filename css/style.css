@@ -280,3 +280,44 @@ body{
     background: whitesmoke;
 }
 
+.modal{
+	position: absolute;
+	z-index: 9;
+	top:0;
+	background: rgba(0,0,0,0.3);
+	width: 100vw;
+	height: 100vh;
+}
+
+.modalContent{
+	position: relative;
+	top:30vh;
+	margin:0 auto;
+	width: 30vw;
+    height: 40vh;
+    background: white;
+    box-shadow: -8px 10px 31px 3px black;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.modalContent h1{
+	font-family: 'Gtek',sans-serif;
+	padding: 17px 0px;
+    margin: 0;
+    text-align: center;
+    background: #FFF44F;
+    border-bottom: 8px solid #FFCC33;
+    border-top: 8px solid #FFCC33;
+}
+
+.modalContent p,h4{
+	font-family: 'ASans',sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: 8px auto;
+}
+
+.modalContent span{
+	text-decoration: overline;
+}
