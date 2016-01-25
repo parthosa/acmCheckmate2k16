@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="js/jquery.min.js"></script>
 	<title>Checkmate 2016</title>
 </head>
@@ -37,8 +38,12 @@
 <section class="modal">
 	<div class="modalContent">
 		<h1>congrats </h1>
-		<h4>The answer submited successfully</h4>
+		<h6>The answer submited successfully</h6>
 		<p>You have earned <span id="Qpoints">50</span> points </p>
+		<div id='modalFooter'>
+			<p><i class="fa fa-cart-plus fa-2x"></i></p>
+			<p><i class="fa fa-times fa-2x" ></i></p>
+		</div>
 	</div>
 </section>
 </div>
@@ -114,6 +119,18 @@ qNos.click(function(){
 	$('#questionContainer h3').html(qsList[qNumber-1]);},1000);
 	$('#questionSection').animate({left:'0vw'},1000);
 });
+
+$(':submit').click(function(){
+	$('.modal').fadeIn();
+	$('.modalContent').animate({top: '30vh'},1000);
+});
+
+$('#modalFooter .fa-times').click(function(){
+	$('.modal').fadeOut();
+	$('.modalContent').animate({top: '20vh'},1000);
+});
+
+
 </script>
 
 </body>

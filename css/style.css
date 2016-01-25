@@ -176,6 +176,7 @@ body{
 }
 
 #submitButton {
+	cursor: pointer;
 	position: relative;
     left: 32px;
 	background: #25A6E1;
@@ -281,6 +282,7 @@ body{
 }
 
 .modal{
+	display: none;
 	position: absolute;
 	z-index: 9;
 	top:0;
@@ -291,7 +293,7 @@ body{
 
 .modalContent{
 	position: relative;
-	top:30vh;
+	top:23vh;
 	margin:0 auto;
 	width: 30vw;
     height: 40vh;
@@ -311,7 +313,7 @@ body{
     border-top: 8px solid #FFCC33;
 }
 
-.modalContent p,h4{
+.modalContent p,h6{
 	font-family: 'ASans',sans-serif;
     font-size: 26px;
     text-align: center;
@@ -319,5 +321,36 @@ body{
 }
 
 .modalContent span{
-	text-decoration: overline;
+	font-weight: bold;
 }
+
+#modalFooter{
+	border-top: 1px solid #ddd;
+	bottom: 0px;
+    width: 95%;
+    padding: 10px 0px;
+    margin: 20px auto;
+}
+
+#modalFooter p{
+	position: relative;
+	display: inline;
+}
+
+
+#modalFooter .fa-cart-plus{
+	float:left;
+	color: #96BD0D;
+	font-size: 33px;
+}
+
+
+#modalFooter .fa-times{
+	cursor: pointer;
+	float:right;
+	color: red;	
+	font-size: 22px;
+    position: relative;
+    top: 9px;
+}
+
