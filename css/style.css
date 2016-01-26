@@ -85,6 +85,7 @@ body{
     padding: 25px 0px;
     margin: 0;    
     border-radius: 20%;
+    letter-spacing: 5px;
 }
 
 
@@ -105,7 +106,7 @@ body{
     display: inline-block;
     background: white;
     padding: 15px;
-    margin: 1% 1%;    
+    margin: 4px;    
     border-radius: 10%;
     transition: transform 0.2s;
     cursor: pointer;
@@ -282,6 +283,7 @@ body{
 }
 
 .modal{
+	cursor: crosshair;
 	display: none;
 	position: absolute;
 	z-index: 9;
@@ -292,11 +294,13 @@ body{
 }
 
 .modalContent{
+	z-index: 4;
+	cursor: default !important;
 	position: relative;
 	top:23vh;
 	margin:0 auto;
-	width: 30vw;
-    height: 40vh;
+	width: 380px;
+    height: 270px;
     background: white;
     box-shadow: -8px 10px 31px 3px black;
     border-radius: 9px;

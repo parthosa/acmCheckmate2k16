@@ -70,6 +70,14 @@
 			var element=document.createElement("li");
 			element.innerHTML=(i<10?("0"+i):i);
 			element.id="q"+i;
+			if(i<=10)
+			$(element).css("border-top","9px solid #B3EE3A");
+			if(i>10&&i<=20)
+			$(element).css("border-top","9px solid #FFE303");
+			if(i>20)
+			$(element).css("border-top","9px solid red");
+			
+		
 			questDiv.appendChild(element);
 		}
 	}
@@ -130,6 +138,11 @@ $('#modalFooter .fa-times').click(function(){
 	$('.modalContent').animate({top: '20vh'},1000);
 });
 
+$('.modal').click(function() {
+    $('.modal').fadeOut();
+	$('.modalContent').animate({top: '20vh'},1000);
+  });
+$('.modalContent').click();
 
 </script>
 
