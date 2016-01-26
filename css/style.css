@@ -4,15 +4,16 @@ body{
 }
 
 
- #puzzlePage,#questionsPage{
+ #puzzlePage,#questionsPage,#loginPage{
  	min-height: 100vh;
  }
 
-#puzzlePage{
+#puzzlePage,#loginPage{
 	background-image: url("../pipesV0.png");
 	background-color: rgba(236, 240, 241,0.5);
 	background-repeat: no-repeat;
 }
+
 
 .mainContent{
 	position: absolute;
@@ -70,7 +71,7 @@ body{
 	right: 0; 
 	width: 25vw;
 	min-height: 100vh;
-	background: rgba(255,0,0,1);
+	background: rgb(75, 67, 181);
 	box-shadow: -6px 16px 66px 5px black;
 }
 
@@ -358,3 +359,41 @@ body{
     top: 9px;
 }
 
+
+#loginContent:first-child{
+	height: 10px !important;
+    width: 350px !important;
+    padding: 0;
+}
+
+#loginContent{
+	position: relative;
+    margin: 0 auto;
+    width: 361px;
+    height: 359px;
+    padding-top: 28px;
+    background-xcolor: white;
+    top: 20vh;
+    box-shadow: 0px 0px 7px -2px;
+    border-radius: 2px;
+}
+
+#loginContent h4{
+	font-family: 'Roboto Condensed',sans-serif;
+    padding-left: 28px;
+    margin: 0px;
+    font-size: 24px;
+    border-left: 5px solid #00EEEE;
+    text-transform: uppercase;
+    color: #00EEEE;
+    letter-spacing: -1px;
+}
+
+form{
+	margin: 3px 0px;
+}
+
+form input{
+	outline: none;
+	border: none;
+}
