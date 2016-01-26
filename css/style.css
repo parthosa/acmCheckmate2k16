@@ -243,6 +243,28 @@ body{
 
 }
 
+#initPipe{
+position: absolute;
+    width: 15%;
+    left: -36px;
+    top: 47px;
+}
+
+#endPipe{
+position: absolute;
+        width: 15%;
+    right: -41px;
+    bottom: 78px;
+}
+
+#endPipe0{
+	position: absolute;
+	height: 15%;
+    bottom: -24px;
+    right: 56px;
+}	
+
+
 #puzzlePieces li{
 	display: inline-block;
     width: 17%;
@@ -484,7 +506,7 @@ form input:valid ~ label{
   width:0; 
   position:absolute;
   background:red; 
-  transition:0.2s ease all; 
+  transition:0.3s ease all; 
 
 }
 .bar:before {
@@ -506,13 +528,13 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 
 .player1{
 	float: left;
-	    top: -18px;
+	    top: -28px
 }
 
 .player2{
 	float: right;
-	    top: -18px;
-}
+	    top: -28px
+	}
 
 form button{
 	cursor: pointer;
