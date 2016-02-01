@@ -71,42 +71,26 @@
 	var questDiv= document.getElementById('questionList');
 	function questionListF(){
 		for(var i=1;i<=30;i++){
-			var element=document.createElement("li");
-			element.innerHTML=(i<10?("0"+i):i);
-			element.id="q"+i;
 			if(i<=10)
-			$(element).css("border-top","9px solid #B3EE3A");
+				$('#questionList').append("<li id= q"+i+" style='border-top:9px solid #B3EE3A'>"+(i<10?("0"+i):i)+"</li>");
 			if(i>10&&i<=20)
-			$(element).css("border-top","9px solid #FFE303");
+				$('#questionList').append("<li id= q"+i+" style='border-top:9px solid #FFE303'>"+(i<10?("0"+i):i)+"</li>");
 			if(i>20)
-			$(element).css("border-top","9px solid red");
-			
-		
-			questDiv.appendChild(element);
+				$('#questionList').append("<li id= q"+i+" style='border-top:9px solid red'>"+(i<10?("0"+i):i)+"</li>");
 		}
 	}
 
 	var puzzleDiv= document.getElementById('puzzlePieces');
 	function puzzleListF(){
 		for(var i=1;i<=25;i++){
-			var element=document.createElement("li");			
-			var elementImg=document.createElement("img");
-			elementImg.setAttribute("src", "piece.png");
-			element.id="p"+i;
-			puzzleDiv.appendChild(element);
-			element.appendChild(elementImg);
+			$('#puzzlePieces').append("<li id= p"+i+"><img src='piece.png'></li>");
 		}
 	}
 
 	var inventoryDiv= document.getElementById('inventoryList');
 	function inventoryListF(){
 		for(var i=1;i<=7;i++){
-			var element=document.createElement("li");			
-			var elementImg=document.createElement("img");
-			elementImg.setAttribute("src", "piece.png");
-			element.id="p"+i;
-			inventoryDiv.appendChild(element);
-			element.appendChild(elementImg);
+			$('#inventoryList').append("<li id= pi"+i+"><img src='piece.png'><i class='fa fa-cart-plus'></i><p>3</p></li>");
 		}
 	}
 	questionListF();
