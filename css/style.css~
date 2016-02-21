@@ -30,7 +30,7 @@ body{
 }
 
 #puzzlePage,#loginPage,#marketPage{
-	background-image: url("../img/pipesV0.png");
+	background-image: url("../pipesV0.png");
 	background-color: rgba(236, 240, 241,0.5);
 	background-repeat: no-repeat;
 }
@@ -40,7 +40,7 @@ body{
 	position: absolute;
 	min-height: 100vh;
 	min-width: 100vw;
-	background-image: url("../img/pipesV.png");
+	background-image: url("../pipesV.png");
 	background-color: rgba(236, 240, 241,0.5);
 	background-repeat: no-repeat;
 }
@@ -57,7 +57,7 @@ body{
 
 
 #qNo{
-	background-image: url("../img/drop.png");
+	background-image: url("../drop.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	left: 20vw;
