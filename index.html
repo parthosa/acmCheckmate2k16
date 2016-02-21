@@ -9,6 +9,12 @@
 </head>
 <body>
 <div id="questionsPage">
+<div id="scorePanel">
+	<p style="font-family: 'Gtek',sans-serif;text-transform: lowercase;">Team: </p><p id="teamName" style="font-size: 16px;">Meta</p>
+
+	<p style="font-family: 'Gtek',sans-serif;text-transform: lowercase;">Score: </p><p id="score" style="font-size: 16px;">3000</p>
+</div>
+
 <section class="sidePanel" id="questions">
 	<h1>questions</h1>
 	<div id="questionsPanel">
@@ -34,16 +40,35 @@
 		</div>
 	</div>
 </section>
-<section class="modal">
+<section class="modal submission">
 </section>
-<section class="modal">
+<section class="modal submission">
 	<div class="modalContent">
 		<h1>congrats </h1>
 		<h6>The answer submited successfully</h6>
 		<p>You have earned <span id="Qpoints">50</span> points </p>
 		<div id='modalFooter'>
-			<p><i class="fa fa-cart-plus fa-2x"></i></p>
-			<p><i class="fa fa-times fa-2x" ></i></p>
+			<p id="gotoMarket">Market Place</p>
+			<p class="close" style="left: 232px;">X</p>
+		</div>
+	</div>
+</section>
+<section class="modal mktPlace">
+</section>
+<section class="modal mktPlace">
+	<div class='Content'>
+	<p class="close" style="width: 14px;
+    float: right;
+    position: relative;
+    left: -25px;
+    top: -15px;
+    border-radius: 3px;">X</p>
+	<h4 style="border-left: 6px solid red;color: red;">Market Place</h4>
+		<div id="priceNotice">
+			<p style="cursor: default;">Each piece costs 100 pts</p>
+		</div>
+		<div id="marketPlacePanel">
+			<ul id="marketPlaceList"></ul>
 		</div>
 	</div>
 </section>
@@ -59,7 +84,6 @@
 	
 	<section id="puzzleArea">
 	<img id='initPipe' src="./pipeStart.png">
-	<img id='endPipe' src="./pipeEnd.png">
 	<img id='endPipe0' src="./pipeEnd0.png">
 		<ul id="puzzlePieces" style="
     padding-bottom: 11px;">
@@ -93,9 +117,17 @@
 			$('#inventoryList').append("<li id= pi"+i+"><img src='piece.png'><i class='fa fa-cart-plus'></i><p>3</p></li>");
 		}
 	}
+
+	function marketListF(){
+		for(var i=1;i<=7;i++){
+			$('#marketPlaceList').append("<li id= pi"+i+"><img src='piece.png'><i class='fa fa-cart-plus'></i><p>Buy</p></li>");
+		}
+	}
+	marketListF();
 	questionListF();
 	puzzleListF();
 	inventoryListF();
+
 </script>
 
 
@@ -117,21 +149,27 @@ qNos.click(function(){
 });
 
 $(':submit').click(function(){
-	$('.modal').fadeIn();
+	$('.submission').fadeIn();
 	$('.modalContent').animate({top: '30vh'},1000);
 });
 
-$('#modalFooter .fa-times').click(function(){
-	$('.modal').fadeOut();
+$('#gotoMarket').click(function(){
+	$('.submission').fadeOut();
+	$('.mktPlace').fadeIn();
 	$('.modalContent').animate({top: '20vh'},1000);
 });
 
-$('.modal').click(function() {
-    $('.modal').fadeOut();
+$('.close').click(function(){
+	$('.submission').fadeOut();
+	$('.mktPlace').fadeOut();
+	$('.modalContent').animate({top: '20vh'},1000);
+});
+/*
+$('.mktPlace').click(function() {
+    $('.mktPlace').fadeOut();
 	$('.modalContent').animate({top: '20vh'},1000);
   });
-$('.modalContent').click();
-
+*/
 </script>
 
 </body>
